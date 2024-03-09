@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteContact} from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/operations';
 import { FaUser } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import css from './Contact.module.css'
@@ -15,7 +15,7 @@ const Contact = ({ contact }) => {
     <li className={css.contactItem}>
         <div>
         <span className={css.contactName}><FaUser />{contact.name}</span>
-        <span className={css.contactNumber}><FaPhone />{contact.number}</span>
+        <span className={css.contactNumber}><FaPhone />{contact.phone}</span>
         </div>
         <button type='button' onClick={handleDelete}>Delete</button>
     </li>
